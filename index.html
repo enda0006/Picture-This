@@ -15,7 +15,29 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+<!-- I'm using art direction to switch between landscape and square images at 960px, rsolution switching within each image using srcset and sized so the browser can choose the correct resolution.-->
+    <picture>
+      <source media="(min-width:960)" srcset="
+      images/square-480x480.jpg
+      images/square-640x640.jpg
+      images/square-800x800.jpg
+      images//square-960x960.jpg
+      images/square-1280x1280.jpg
+      images/square-1600x1600.jpg
+      images/square-1920x1920.jpg
+      images/square-2400x2400.jpg" sizes="50vw">
+    </picture>
+    <img src="images/landscape-320x.jpg" srcset="images/landscape-320x.jpg
+    images/landscape-480x.jpg
+    images/landscape-640x.jpg
+    images/landscape-720x.jpg
+    images/landscape-960x.jpg
+    images/landscape-1440x.jpg
+    images/landscape-1920x.jpg
+    images/landscape-2160x.jpg
+    images/landscape-2880x.jpg"
+    sizes="100vw" 
+    alt="Interior view of a musemum with architectural details">
 
   </header>
 </body>
